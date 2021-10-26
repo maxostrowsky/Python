@@ -5,26 +5,44 @@
 # In the sports_directory, change 'Messi' to 'Andres'
 # Change the value 20 in z to 30
 
-# x = [[5,2,3], [10,8,9]]
-# students = [
-#     {'first_name': 'michael', 'last_name': 'Jordan'},
-#     {'first_name': 'John', 'last_name': 'Rosales'}
-# ]
-# sports_directory = {
-#     'basketball' : ['Kobe', 'Jordan', 'James', 'Curry'],
-#     'soccer' : ['Messi', 'Ronaldo', 'Rooney']
-# }
-# z = [{'x': 10, 'y': 20}]
+x = [[5,2,3], [10,8,9]]
+students = [
+    {'first_name': 'michael', 'last_name': 'Jordan'},
+    {'first_name': 'John', 'last_name': 'Rosales'}
+]
+sports_directory = {
+    'basketball' : ['Kobe', 'Jordan', 'James', 'Curry'],
+    'soccer' : ['Messi', 'Ronaldo', 'Rooney']
+}
+z = [{'x': 10, 'y': 20}]
 
-# x[1][0] = 15
-# students[0]['last_name'] = 'Byrant'
-# sports_directory['soccer'][0] = 'Andres'
-# z[0]['y'] = 30
+def change_x(some_list):
+    some_list[1][0] = 15
 
-# print(students)
-# print(x)
-# print(sports_directory)
-# print(z)
+change_x(x)
+print(x)
+
+
+def change_name(some_list):
+    some_list[0]['last_name'] = 'bryant'
+
+change_name(students)
+print(students)
+
+def sports_name(some_dict):
+    some_dict['soccer'][0] = 'Andres'
+
+sports_name(sports_directory)
+print(sports_directory)
+
+def change_z(some_list):
+    some_list[0]['y'] = 30
+
+change_z(z)
+print(z)
+
+
+
 
 # Iterate Through a List of Dictionaries
 
@@ -32,26 +50,31 @@
 # function loops through each dictionary in the list and prints each key and the associated value. 
 # For example, given the following list:
 
-# students = [
-#         {'first_name':  'Michael', 'last_name' : 'Jordan'},
-#         {'first_name' : 'John', 'last_name' : 'Rosales'},
-#         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-#         {'first_name' : 'KB', 'last_name' : 'Tonel'}
-# #     ]
-# # iterateDictionary(students) 
+students = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+# iterateDictionary(students) 
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
 # bonus to get them to appear exactly as below!)
+# output:
 # first_name - Michael, last_name - Jordan
 # first_name - John, last_name - Rosales
 # first_name - Mark, last_name - Guillen
 # first_name - KB, last_name - Tonel
 
-# def iterateDictionary(some_list):
-#     for name in range(len(students)):
-#         print(students[name])
-#     return(students)
+def iterateDictionary(some_list):
+    for name in some_list:
+        first_name = name['first_name']
+        last_name = name['last_name']
+        print(f'first_name - {first_name}, last_name - {last_name}')
 
-# iterateDictionary(students)
+iterateDictionary(students)
+
+
+# 2 BONUS
 
 
 # #3 Get Values From a List of Dictionaries
@@ -60,12 +83,14 @@
 # # dictionaries and a key name, the function prints the value stored in that key for each 
 # # dictionary. For example, iterateDictionary2('first_name', students) should output:
 
-# def iterateDictionary2(key_name, sone_list):
-#     for idx in range(len(students)):
-#         print(students[idx][key_name])
-#     return students
+def iterateDictionary2(key_name, some_list):
+    # print(f'key name: {key_name}')
+    # print(f'list: {some_list}')
+    for dict in some_list:
+        if key_name in dict:
+            print(dict[key_name])
 
-# iterateDictionary2('first_name', students)
+iterateDictionary2('first_name', students)
 
 # 4 Iterate Through a Dictionary with List Values
 
@@ -104,17 +129,17 @@
 
 
 
-dojo = {
-    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
-    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
-}
+# dojo = {
+#     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+#     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+# }
 
-def print_dojo(some_dict):
-    for key in some_dict:
-        list_length = len(some_dict[key])
-        print(f'{list_length} {key.upper()}')
-        for name in some_dict[key]:
-            print(name)
-        print()
-print_dojo(dojo)
+# def print_dojo(some_dict):
+#     for key in some_dict:
+#         list_length = len(some_dict[key])
+#         print(f'{list_length} {key.upper()}')
+#         for name in some_dict[key]:
+#             print(name)
+#         print()
+# print_dojo(dojo)
 

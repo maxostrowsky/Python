@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 1200px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.body{
+    margin-left: 290px;
+}
+.square1{
+    width: 75px;
+    height: 75px;
+}
+
+.square2{
+    width: 75px;
+    height: 75px;
+}
+

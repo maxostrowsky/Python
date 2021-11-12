@@ -1,0 +1,7 @@
+.recipe.container.d-flex{
+    border: solid black;
+    width: 500px;
+    min-height: 100px;
+    position: relative;
+    right: 400px;
+}
